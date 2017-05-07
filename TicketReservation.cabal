@@ -13,15 +13,28 @@ build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
+source-repository head
+  type:     git
+  location: https://github.com/rpereira/ticket-reservation
+
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib
-                     , API
+  exposed-modules:     Api
+                     , Api.Train
+                     , Config
                      , Models
   build-depends:       base >= 4.7 && < 5
                      , aeson
+                     , bytestring
+                     , monad-logger
+                     , mtl
+                     , persistent
+                     , persistent-postgresql
+                     , persistent-template
                      , servant-server
+                     , transformers
                      , wai
+                     , wai-extra
                      , warp
   default-language:    Haskell2010
 
@@ -31,6 +44,11 @@ executable TicketReservation-exe
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
                      , TicketReservation
+                     , monad-logger
+                     , persistent-postgresql
+                     , safe
+                     , wai
+                     , warp
   default-language:    Haskell2010
 
 test-suite TicketReservation-test
@@ -45,7 +63,3 @@ test-suite TicketReservation-test
                      , aeson
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
-
-source-repository head
-  type:     git
-  location: https://github.com/rpereira/ticket-reservation
