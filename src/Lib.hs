@@ -1,5 +1,4 @@
 {-# LANGUAGE DataKinds       #-}
-{-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE TypeOperators   #-}
 module Lib
     ( startApp
@@ -12,14 +11,8 @@ import Network.Wai
 import Network.Wai.Handler.Warp
 import Servant
 
-data Train = Train
-  { id :: Int
-  , name :: String
-  } deriving (Eq, Show)
-
-$(deriveJSON defaultOptions ''Train)
-
-type API = "trains" :> Get '[JSON] [Train]
+import API
+import Models
 
 startApp :: IO ()
 startApp = run 8080 app
