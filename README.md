@@ -10,3 +10,17 @@ Type "help" for help.
 postgres=# CREATE ROLE railway WITH LOGIN PASSWORD 'railway';
 postgres=# CREATE DATABASE railway;
 ```
+
+## API
+
+### Train
+
+```
+# GET users
+curl --verbose --request GET --header "Content-Type: application/json" \
+  http://localhost:8080/trains
+
+# GET users/:name
+curl --verbose --request GET --header "Content-Type: application/json" \
+  http://localhost:8080/trains/Alpha%20Train
+```
