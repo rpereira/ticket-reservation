@@ -17,6 +17,18 @@ postgres=# CREATE DATABASE railway;
 
 ## API
 
+### Station
+
+```
+# GET users
+curl --verbose --request GET --header "Content-Type: application/json" \
+  http://localhost:8080/stations
+
+# GET users/:name
+curl --verbose --request GET --header "Content-Type: application/json" \
+  http://localhost:8080/stations/Richmond
+```
+
 ### Train
 
 ```
