@@ -14,11 +14,6 @@ import Models
 
 import Api.Train
 
--- | This is the function we export to run our 'trainAPI'. Given a 'Config', we
--- return a WAI 'Application' which any WAI compliant server can run.
-trainApp :: Config -> Application
-trainApp cfg = serve (Proxy :: Proxy TrainAPI) (appToServer cfg)
-
 -- | This functions tells Servant how to run the 'App' monad with our 'server'
 -- function.
 appToServer :: Config -> Server TrainAPI
