@@ -15,6 +15,12 @@ postgres=# CREATE ROLE railway WITH LOGIN PASSWORD 'railway';
 postgres=# CREATE DATABASE railway;
 ```
 
+## Seed database
+
+```
+❯ psql railway < seeds.sql
+```
+
 ## API
 
 ### Station
