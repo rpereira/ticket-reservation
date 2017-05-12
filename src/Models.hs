@@ -23,9 +23,13 @@ import GHC.Generics         (Generic)
 import Config
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
+Station json
+  name String
+  deriving Show
+
 Train json
-    name String
-    deriving Show
+  name String
+  deriving Show
 |]
 
 doMigrations :: SqlPersistT IO ()
