@@ -1,0 +1,406 @@
+Elephant & Castle,EPH,ELPHNAC
+London Bridge,LBG,LNDNBDC
+London Waterloo East,WAE,WLOE
+London Waterloo,WAT,WATRLMN
+South Bermondsey,SBM,SBRMNDS
+Denmark Hill,DMK,DENMRKH
+London Cannon Street,CST,CANONST
+Vauxhall,VXH,VAUXHLW
+Peckham Rye,PMR,PCKHMRY
+London Fenchurch Street,FST,FENCHRS
+London Blackfriars,BFR,BLFR
+Loughborough Junction,LGJ,LBGHJN
+Wapping,WPE,WAPPING
+Queens Road (Peckham),QRP,PCKHMQD
+Rotherhithe,ROE,RTHERHI
+Canada Water,ZCW,CNDAW
+Surrey Quays,SQE,SURREYQ
+City Thameslink,CTK,CTMSLNK
+East Dulwich,EDW,EDULWCH
+London Liverpool Street,LST,LIVST
+Moorgate (Great Northern),MOG,MRGT
+Shadwell,SDE,SHADWEL
+London Charing Cross,CHX,CHRX
+Brixton,BRX,BRIXTON
+Barbican,ZBB,BRBCNLT
+Nunhead,NHD,NUNHEAD
+Farringdon (London),ZFD,FRNDNLT
+New Cross Gate,NXG,NEWXGEL
+Whitechapel,ZWL,WCHAPEL
+Shoreditch High Street,SDC,SHRDHST
+North Dulwich,NDL,NDULWCH
+London Victoria,VIC,VICTRIE
+Old Street,OLD,OLDST
+Clapham High Street,CLP,CLPHHS
+Wandsworth Road,WWR,WNDSWRD
+New Cross,NWX,NWCRELL
+Herne Hill,HNH,HERNEH
+Limehouse,LHS,LIMHSE
+Bethnal Green,BET,BTHNLGR
+Battersea Park,BAK,BATRSPK
+Queenstown Road (Battersea),QRB,QTRDBAT
+Deptford,DEP,DEPTFD
+Brockley,BCY,BROCKLY
+Hoxton,HOX,HOXTON
+St Johns,SAJ,STJOHNS
+Cambridge Heath,CBH,CAMHTH
+London Kings Cross,KGX,KNGX
+London St Pancras International,STP,STPANCI
+London St Pancras International,SPX,STPANCI
+Crofton Park,CFT,CFPK
+Honor Oak Park,HPA,HONROPK
+London Euston,EUS,EUSTON
+Greenwich,GNW,GNWH
+West Dulwich,WDU,WDULWCH
+Haggerston,HGG,HAGGERS
+Tulse Hill,TUH,TULSEH
+Essex Road,EXR,ESSEXRD
+Lewisham,LEW,LEWISHM
+Ladywell,LAD,LDYW
+Forest Hill,FOH,FORESTH
+London Fields,LOF,LONFLDS
+Caledonian Road & Barnsbury,CIR,CLDNNRB
+Streatham Hill,SRH,STRHILL
+London Marylebone,MYB,MARYLBN
+Sydenham Hill,SYH,SYDNHMH
+Clapham Junction,CLJ,CLPHMJ1
+Maze Hill,MZH,MAZEH
+Dalston Junction,DLJ,DALS
+Highbury & Islington,HHY,HIGHBYA
+West Norwood,WNW,WNORWOD
+Dalston Kingsland,DLK,DALSKLD
+Canonbury,CNN,CNNB
+Catford,CTF,CATFORD
+Catford Bridge,CFB,CATFBDG
+Imperial Wharf,IMW,CSEAH
+London Paddington,PAD,PADTON
+Hackney Central,HKC,HACKNYC
+Camden Road,CMD,CMDNRD
+Balham,BAL,BALHAM
+Hackney Downs,HAC,HAKNYNM
+Wandsworth Common,WSW,WANDCMN
+Drayton Park,DYP,DRYP
+Homerton,HMN,HOMRTON
+Blackheath,BKH,BLKHTH
+Gipsy Hill,GIP,GIPSYH
+Sydenham,SYD,SYDENHM
+Hither Green,HGR,HTHRGRN
+Westcombe Park,WCB,WCOMBEP
+Hackney Wick,HKW,HACKNYW
+West Brompton,WBP,WBRMPTN
+Kentish Town West,KTW,KNTSHTW
+Wandsworth Town,WNT,WDWTOWN
+Kentish Town,KTN,KNTSHTN
+Streatham,STE,STRETHM
+Rectory Road,REC,RCTRYRD
+West Ham,WEH,WHAMHL
+Bellingham,BGM,BELNGHM
+Crystal Palace,CYP,CRYSTLP
+Lower Sydenham,LSY,LSYDNHM
+Penge East,PNE,PNGEE
+Penge West,PNW,PENEW
+Stratford International,SFA,STFODOM
+Stratford,SRA,STFD
+Charlton,CTN,CRLN
+Clapton,CPT,CLAPTON
+Lee,LEE,LEEE
+Finsbury Park,FPK,FNPK
+Stoke Newington,SKW,STKNWNG
+Gospel Oak,GPO,GOSPLOK
+Kensington Olympia,KPA,KENOLYM
+South Hampstead,SOH,SHMPSTD
+Streatham Common,SRC,STRHCOM
+Kidbrooke,KDB,KIDBROK
+Earlsfield,EAD,ERLFLD
+Upper Holloway,UHL,UPRHLWY
+Anerley,ANZ,ANERLEY
+Beckenham Hill,BEC,BCKNHMH
+New Beckenham,NBC,NBCKNHM
+Kilburn High Road,KBN,KLBRNHR
+Norbury,NRB,NORBURY
+Maryland,MYL,MRYLAND
+Hampstead Heath,HDH,HMPSTDH
+Kent House,KTH,KENTHOS
+Shepherds Bush,SPB,SHPDSB
+Tooting,TOO,TOOTING
+Crouch Hill,CRH,CROUCHH
+Finchley Road & Frognal,FNY,FNCHLYR
+Putney,PUT,PUTNEY
+Queens Park (London),QPW,QPRK
+Stamford Hill,SMH,STMFDHL
+Clock House,CLK,CLOCKHS
+West Hampstead,WHD,WHMDSTD
+West Hampstead Thameslink,WHP,WHMPSTM
+Beckenham Junction,BKJ,BCKNMJC
+Harringay Green Lanes,HRY,HRGYGL
+Birkbeck,BIK,BIRKBCK
+Harringay,HGY,HRGY
+Woolwich Dockyard,WWD,WOLWCDY
+Haydons Road,HYR,HYDNSRD
+Grove Park,GRP,GRVPK
+Brondesbury,BSY,BRBY
+Ravensbourne,RVB,RBRN
+Thornton Heath,TTH,THTH
+South Tottenham,STO,STOTNHM
+Brondesbury Park,BSP,BRBYPK
+Mitcham Eastfields,MTC,ESTFLDS
+Forest Gate,FOG,FRSTGT
+Norwood Junction,NWD,NORWDJ
+Seven Sisters,SVS,SEVNSIS
+Kensal Rise,KNR,KENR
+Eltham,ELW,ELTHAM
+Elmers End,ELE,ELMERSE
+Leyton Midland Road,LEM,LEYTNMR
+Wanstead Park,WNP,WNSTDPK
+Kensal Green,KNL,KENSLG
+Leytonstone High Road,LER,LYTNSHR
+Selhurst,SRS,SELHRST
+St James Street,SJS,STJMSST
+Woolwich Arsenal,WWA,WOLWCHA
+Hornsey,HRN,HRNSY
+Barnes,BNS,BARNES
+Mottingham,MTG,MOTNGHM
+Walthamstow Queens Road,WMW,WLTHQRD
+Tottenham Hale,TOM,TTNHMHL
+Wimbledon,WIM,WDON
+Shortlands,SRT,SHRTLND
+Blackhorse Road,BHO,BLCHSRD
+Woodgrange Park,WGR,WDGRNPK
+Sundridge Park,SUP,SNDP
+Walthamstow Central,WHC,WLTWCEN
+Cricklewood,CRI,CRKLWD
+Barnes Bridge,BNI,BNSBDGE
+Bromley North,BMN,BROMLYN
+Manor Park,MNP,MANRPK
+Bruce Grove,BCV,BRUCGRV
+Willesden Junction,WIJ,WLSDNJL
+Mitcham Junction,MIJ,MITCHMJ
+Eden Park,EDN,EDPK
+Plumstead,PLU,PLMS
+Falconwood,FCN,FALCNWD
+Elmstead Woods,ESD,ELMW
+Alexandra Palace,AAP,ALEXNDP
+Acton Central,ACC,ACTNCTL
+Wood Street,WST,WDST
+Bromley South,BMS,BROMLYS
+New Eltham,NEH,NWELTHM
+West Croydon,WCY,WCROYDN
+Wimbledon Chase,WBO,WIMLCHS
+Chiswick,CHK,CHISWCK
+South Merton,SMO,SMERTON
+Mortlake,MTL,MRTLKE
+South Acton,SAT,SACTON
+East Croydon,ECR,ECROYDN
+Northumberland Park,NUM,NMBRLPK
+Acton Main Line,AML,ACTONML
+Harlesden,HDN,HARLSDN
+White Hart Lane,WHL,WHHRTLA
+Morden South,MDS,MORDENS
+Barking,BKG,BARKING
+Gunnersbury,GUN,GNRSBRY
+West Wickham,WWI,WWICKHM
+Hackbridge,HCB,HKBG
+Bowes Park,BOP,BOWESPK
+Raynes Park,RAY,RAYNSPK
+Ilford,IFD,ILFORD
+Welling,WLI,WELLING
+St Helier (London),SIH,SHLIER
+Bickley,BKL,BICKLEY
+Kew Gardens,KWG,KEWGRDN
+Waddon,WDO,WADDON
+Chislehurst,CIT,CHSLHRS
+Kew Bridge,KWB,KEWBDGE
+Angel Road,AGR,ANGELRD
+Silver Street,SLV,SIVRST
+South Croydon,SCY,SCROYDN
+North Sheen,NSH,NSHEEN
+Hayes (Kent),HYS,HAYS
+Stonebridge Park,SBP,STNBGPK
+New Southgate,NSG,NEWSGAT
+Palmers Green,PAL,PALMRSG
+Hendon,HEN,HDON
+Abbey Wood,ABW,ABWD
+Carshalton,CSH,CRSHLTN
+Highams Park,HIP,HGHMSPK
+Sidcup,SID,SIDCUP
+Sutton Common,SUC,SUTTONC
+Motspur Park,MOT,MOTSPRP
+Wallington,WLT,WALNGTN
+New Malden,NEM,NEWMLDN
+Ealing Broadway,EAL,EALINGB
+Richmond,RMD,RICHNLL
+Edmonton Green,EDR,EDMNGRN
+Seven Kings,SVK,SVNKNGS
+Brentford,BFD,BNTFORD
+Wembley Stadium,WCX,WEMBLSM
+Bexleyheath,BXH,BXLYHTH
+Sanderstead,SNR,SDSD
+Carshalton Beeches,CSB,CRSHLTB
+Purley Oaks,PUO,PURLEYO
+Petts Wood,PET,PETSWD
+West Sutton,WSU,WSUTTON
+Albany Park,AYP,ALBNYPK
+Wembley Central,WMB,WMBYDC
+Norbiton,NBT,NRBITON
+Winchmore Hill,WIH,WNMHILL
+Sutton (Surrey),SUO,SUTTON
+Goodmayes,GMY,GODMAYS
+Worcester Park,WCP,WRCSTRP
+West Ealing,WEA,WEALING
+Syon Lane,SYL,SYONLA
+St Margarets (Greater London),SMG,STMGTS
+Belvedere,BVD,BELVEDR
+Dagenham Dock,DDK,DGNHMDC
+Berrylands,BRS,BRLANDS
+Malden Manor,MAL,MALDENM
+Bush Hill Park,BHK,BHILLPK
+Purley,PUR,PURLEY
+North Wembley,NWB,NWEMBLY
+Drayton Green,DRG,DRAYGRN
+Grange Park,GPK,GRPK
+Kingston,KNG,KGSTON
+St Mary Cray,SMY,STMRYC
+Bexley,BXY,BEXLEY
+Castle Bar Park,CBP,CBARPAR
+Cheam,CHE,CHEAM
+Sudbury & Harrow Road,SUD,SDBRYHR
+Isleworth,ISL,ISLEWTH
+Oakleigh Park,OKL,OKLGHPK
+Chingford,CHI,CHINGFD
+Twickenham,TWI,TWCKNHM
+Chadwell Heath,CTH,CHDWLHT
+Ponders End,PON,PNDRSEN
+Barnehurst,BNH,BRNHRST
+Riddlesdown,RDD,RDLSDWN
+Hanwell,HAN,HANWELL
+Hampton Wick,HMW,HAMWICK
+South Kenton,SOK,SKENTON
+Mill Hill Broadway,MIL,MLHB
+Reedham (Surrey),RHM,REEDHMS
+Orpington,ORP,ORPNGTN
+Southbury,SBU,SBURY
+South Greenford,SGN,SGFORD
+Stoneleigh,SNL,STLEIGH
+Belmont,BLM,BELM
+Enfield Town,ENF,ENFLDTN
+Enfield Chase,ENC,ENFC
+Tolworth,TOL,TOLWTH
+Erith,ERH,ERITH
+Strawberry Hill,STW,STRWBYH
+Kenley,KLY,KNLY
+Teddington,TED,TEDNGTN
+Surbiton,SUR,SURBITN
+New Barnet,NBA,NBARNET
+Sudbury Hill Harrow,SDH,SDBRYHH
+Greenford,GFD,GFORD
+Kenton,KNT,KTON
+Brimsdown,BMD,BRIMSDN
+Coulsdon Town,CDN,COLSTWN
+Crayford,CRY,CRFD
+Fulwell,FLW,FULWELL
+Whitton,WTN,WHTTON
+Hounslow,HOU,HOUNSLW
+Ewell East,EWE,EWELLE
+Gordon Hill,GDH,GORDONH
+Ewell West,EWW,EWELW
+Slade Green,SGR,SLADEGN
+Woodmansterne,WME,WDMNSTR
+Rainham (Essex),RNM,RNHAME
+Coulsdon South,CDS,COLSDNS
+Banstead,BAD,BANSTED
+Harrow On The Hill,HOH,HAROOTH
+Whyteleafe,WHY,WHYTELF
+Hampton Court,HMC,HCRT
+Upper Warlingham,UWL,UWRLNGH
+Chelsfield,CLD,CHLSFLD
+Southall,STL,STHALL
+Northolt Park,NLT,NTHOLTP
+Chessington North,CSN,CHSSN
+Harrow & Wealdstone,HRW,HROW
+Turkey Street,TUR,TURKYST
+Enfield Lock,ENL,ENFLDLK
+Thames Ditton,THD,TDITTON
+Whyteleafe South,WHS,WHYTLFS
+Swanley,SAY,SWLY
+Hadley Wood,HDW,HADLYWD
+Chipstead,CHP,CHSD
+Romford,RMF,ROMFORD
+Epsom Downs,EPD,EPSDNS
+Chessington South,CSS,CHSSS
+Hampton (London),HMP,HAMPTON
+Epsom,EPS,EPSM
+Hinchley Wood,HYW,HNCHLYW
+Crews Hill,CWH,CRHL
+Dartford,DFD,DARTFD
+Knockholt,KCK,KNCKHLT
+Esher,ESH,ESHER
+Waltham Cross,WLC,WALHAMX
+Woldingham,WOH,WLDNGHM
+Headstone Lane,HDL,HEDSTNL
+Elstree & Borehamwood,ELS,ELTR
+Purfleet,PFL,PURFLET
+Tattenham Corner,TAT,TATNHMC
+Feltham,FEL,FELTHAM
+Gidea Park,GDP,GIDEAPK
+South Ruislip,SRU,SRUISLP
+Claygate,CLG,CLYGATE
+Emerson Park,EMP,EMRSPKH
+Hayes & Harlington,HAY,HAYESAH
+Kingswood,KND,KGWD
+Hatch End,HTE,HTCHEND
+Kempton Park,KMP,KMPTNPK
+Sunbury,SUU,SUNBURY
+Tadworth,TAD,TADWTH
+Hersham,HER,HERSHAM
+Ashtead,AHD,ASHD
+Farningham Road,FNR,FRNNGRD
+Upminster,UPM,UPMNSTR
+Eynsford,EYN,EYNSFD
+Stone Crossing,SCG,STCR
+Heathrow Airport   Terminal 4,HAF,HTRWTM4
+Harold Wood,HRO,HRLDWOD
+Upper Halliford,UPH,UHALIFD
+Heathrow Airport   Central Terminal Area (T123),HXX,HTRWAPT
+Oxshott,OXS,OXSHOTT
+Carpenders Park,CPK,CRPNDPK
+West Ruislip,WRU,WRUISLP
+Greenhithe,GNH,GNHT
+Shoreham,SEH,SHRMKT
+Chafford Hundred,CFH,CHADHDD
+Walton On Thames,WAL,WONT
+Ockendon,OCK,OCKENDN
+West Drayton,WDT,WDRYTON
+Bushey,BSH,BUSHEY
+Radlett,RDT,RADLETT
+Shepperton,SHP,SHEPRTN
+Ashford (Surrey),AFS,ASFDMSX
+Leatherhead,LHD,LETHRHD
+Watford High Street,WFH,WATFDHS
+Otford,OTF,OTFORD
+Swanscombe,SWM,SWNSCMB
+Heathrow Airport   Terminal 5,HWV,HTRWTM5
+Dunton Green,DNG,DTNG
+Cobham & Stoke D'abernon,CSD,CBHMSDA
+Grays,GRY,GRAYS
+Watford Junction,WFJ,WATFDJ
+Ebbsfleet International,EBD,EBSFLTI
+Longfield,LGF,LGFD
+Northfleet,NFL,NRTHFLT
+Iver,IVR,IVER
+Weybridge,WYB,WEYBDGE
+Watford North,WFN,WATFDN
+Staines,SNS,STAINES
+Bat And Ball,BBL,BATABAL
+Garston (Hertfordshire),GSN,GRSTH
+Denham,DNM,DENHAM
+Brentwood,BRE,BRTWOOD
+Bookham,BKA,BOOKHAM
+Addlestone,ASN,ADLESTN
+Chertsey,CHY,CHTSEY
+Byfleet & New Haw,BFN,BYFLANH
+Rickmansworth,RIC,RCKMNSW
+Kemsing,KMS,KEMSING
+Effingham Junction,EFF,EFNGHMJ
+Shenfield,SNF,SHENFLD
+West Byfleet,WBY,WBYFLET
+Borough Green & Wrotham,BRG,BORWGAW
