@@ -27,6 +27,9 @@ share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Station json
   name Text
   code Text sqltype=varchar(3)
+
+  UniqueCode code
+
   deriving Show
 
 Train json
