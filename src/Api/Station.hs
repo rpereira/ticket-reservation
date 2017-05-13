@@ -3,6 +3,7 @@
 
 module Api.Station where
 
+import Data.Text                   (Text)
 import Database.Persist.Postgresql (Entity (..), selectList, selectFirst, (==.))
 import Servant
 
@@ -11,7 +12,7 @@ import Models
 
 type StationAPI =
        "stations" :> Get '[JSON] [Entity Station]
-  :<|> "stations" :> Capture "name" String :> Get '[JSON] (Entity Station)
+  :<|> "stations" :> Capture "name" Text :> Get '[JSON] (Entity Station)
 
 stationServer :: ServerT StationAPI App
 stationServer = allStations :<|> getStation
@@ -19,7 +20,7 @@ stationServer = allStations :<|> getStation
 allStations :: App [Entity Station]
 allStations = runDb (selectList [] [])
 
-getStation :: String -> App (Entity Station)
+getStation :: Text -> App (Entity Station)
 getStation str = do
   maybeStation <- runDb (selectFirst [StationName ==. str] [])
   case maybeStation of

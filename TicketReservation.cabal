@@ -33,6 +33,7 @@ library
                      , persistent-postgresql
                      , persistent-template
                      , servant-server
+                     , text
                      , transformers
                      , wai
                      , wai-extra

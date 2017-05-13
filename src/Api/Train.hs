@@ -3,6 +3,7 @@
 
 module Api.Train where
 
+import Data.Text                   (Text)
 import Database.Persist.Postgresql (Entity (..), selectList, selectFirst, (==.))
 import Servant
 
@@ -11,7 +12,7 @@ import Models
 
 type TrainAPI =
        "trains" :> Get '[JSON] [Entity Train]
-  :<|> "trains" :> Capture "name" String :> Get '[JSON] (Entity Train)
+  :<|> "trains" :> Capture "name" Text :> Get '[JSON] (Entity Train)
 
 -- | The server that runs the TrainAPI
 trainServer :: ServerT TrainAPI App
@@ -20,7 +21,7 @@ trainServer = allTrains :<|> getTrain
 allTrains :: App [Entity Train]
 allTrains = runDb (selectList [] [])
 
-getTrain :: String -> App (Entity Train)
+getTrain :: Text -> App (Entity Train)
 getTrain str = do
   maybeTrain <- runDb (selectFirst [TrainName ==. str] [])
   case maybeTrain of

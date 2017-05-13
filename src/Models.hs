@@ -15,6 +15,7 @@ module Models where
 
 import Control.Monad.Reader
 import Data.Aeson           (FromJSON, ToJSON)
+import Data.Text            (Text)
 import Database.Persist.Sql
 import Database.Persist.TH  (mkMigrate, mkPersist, persistLowerCase,
                              share, sqlSettings)
@@ -24,11 +25,11 @@ import Config
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Station json
-  name String
+  name Text
   deriving Show
 
 Train json
-  name String
+  name Text
   deriving Show
 |]
 
