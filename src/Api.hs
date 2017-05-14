@@ -12,14 +12,15 @@ import Servant
 import Config                      (App (..), Config (..))
 import Models
 
+import Api.Schedule
 import Api.Station
 import Api.Train
 
-type API = StationAPI :<|> TrainAPI
+type API = StationAPI :<|> TrainAPI :<|> ScheduleAPI
 
 -- | Combinate all endpoints to be served.
 server :: ServerT API App
-server = stationServer :<|> trainServer
+server = stationServer :<|> trainServer :<|> scheduleServer
 
 appApi :: Proxy API
 appApi = Proxy
