@@ -123,11 +123,11 @@ def extract_trains
   puts "\n==> Extracting trains"
 
   trains = []
-  train_names = csv_to_json(SCHEDULES_FILE_PATH, 'train_id')
-  train_names.each do |name|
-    trains.push({ :name => name })
+  train_names = csv_to_json(SCHEDULES_FILE_PATH, 'train_id').uniq
+  train_names.each_with_index do |value, index|
+    trains.push({ :id => index, :name => value })
   end
-  trains.uniq
+  trains
 end
 
 def main
