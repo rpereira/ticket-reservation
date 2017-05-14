@@ -110,7 +110,7 @@ def parse_schedules(data)
   schedules = []
   data['updates']['all'].each do |x|
     next unless x['mode'] == 'train'
-    x.except!('mode', 'platform', 'operator', 'operator_name', 'category')
+    x.except!('mode', 'platform', 'operator', 'operator_name', 'source', 'category')
     schedules.push map_schedule(x)
   end
   schedules
