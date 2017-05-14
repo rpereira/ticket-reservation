@@ -25,10 +25,11 @@ import Config
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Station json
-  name Text
-  code Text sqltype=varchar(3)
+  name        Text
+  crs_code    Text sqltype=varchar(3)
+  tiplic_code Text sqltype=varchar(7)
 
-  UniqueCode code
+  UniqueCode crs_code tiplic_code
 
   deriving Show
 
