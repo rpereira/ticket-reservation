@@ -65,21 +65,22 @@ def fetch_stations
   total = response['total']
   total_pages = total / rpp
 
-  stations = parse_stations(response)
+  stations = parse_stations(response, 0)
   puts "page = #{response['page']}; total = #{stations.length}"
   (2..total_pages).each do |page|
     response = get_as_json("#{STATIONS_URL}&page=#{page}")
-    stations.concat parse_stations(response)
+    stations.concat parse_stations(response, stations.size)
     puts "page = #{page}; total = #{stations.length}"
   end
 
   stations
 end
 
-def parse_stations(data)
+def parse_stations(data, index_start)
   stations = []
-  data['stations'].each do |station|
+  data['stations'].each_with_index do |station, index|
     stations.push({
+      id: index_start + index,
       name: station['name'],
       crs_code: station['station_code'],
       tiploc_code: station['tiploc_code']
