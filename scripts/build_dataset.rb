@@ -41,6 +41,12 @@ def csv_to_json(fpath, column)
   rows
 end
 
+def csv_to_array(fpath)
+  csv = CSV::parse(File.open(fpath, 'r') { |f| f.read })
+  fields = csv.shift
+  csv.collect { |record| Hash[*fields.zip(record).flatten ] }
+end
+
 def write_to_file(data, fpath)
   File.open(fpath, 'w') do |f|
     f.write(data)
@@ -130,6 +136,17 @@ def extract_trains
   trains
 end
 
+def update_train_id
+  trains = csv_to_array(TRAINS_FILE_PATH)
+  schedules = csv_to_array(SCHEDULES_FILE_PATH)
+  updated = []
+  schedules.each do |entry|
+    train = trains.find { |t| t['name'] == entry['train_id'] }
+    updated.push entry.merge!("train_id" => train['id'])
+  end
+  updated
+end
+
 def main
   stations = fetch_stations
   write_to_file(json_to_csv(stations), STATIONS_FILE_PATH)
@@ -139,6 +156,9 @@ def main
 
   trains = extract_trains
   write_to_file(json_to_csv(trains), TRAINS_FILE_PATH)
+
+  updated_schedules = update_train_id
+  write_to_file(json_to_csv(updated_schedules), SCHEDULES_FILE_PATH)
 end
 
 main
