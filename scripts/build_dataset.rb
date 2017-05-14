@@ -9,6 +9,17 @@ TIME_TABLE_URL = "#{BASE_URL}/station/$0/2017-05-15/06:00/timetable.json?app_id=
 STATIONS_FILE_PATH  = 'metadata/stations.csv'
 SCHEDULES_FILE_PATH = 'metadata/schedules.csv'
 
+class Hash
+  # Removes the given keys from hash and returns it.
+  #   hash = { a: true, b: false, c: nil }
+  #   hash.except!(:c) # => { a: true, b: false }
+  #   hash             # => { a: true, b: false }
+  def except!(*keys)
+    keys.each { |key| delete(key) }
+    self
+  end
+end
+
 def json_to_csv(data)
   column_names = data.first.keys
   csv_string = CSV.generate do |csv|
@@ -81,18 +92,29 @@ end
 
 def fetch_schedule_for_station(crs_code)
   print "#{crs_code} "
-  departures = []
+  schedules = []
   url = TIME_TABLE_URL.clone.sub! '$0', crs_code
   response = get_as_json(url)
-  departures.concat parse_departures(response)
+  schedules.concat parse_schedules(response)
 end
 
-def parse_departures(data)
-  departures = []
+def parse_schedules(data)
+  schedules = []
   data['updates']['all'].each do |x|
     next unless x['mode'] == 'train'
-    departures.push x
+    x.except!('mode', 'platform', 'operator', 'operator_name', 'category')
+    schedules.push map_schedule(x)
   end
+  schedules
+end
+
+def map_schedule(hash)
+  mappings = {
+    "train_uid" => "train_id", "aimed_departure_time" => "departure_time",
+    "aimed_arrival_time" => "arrival_time", "aimed_pass_time" => "pass_time",
+    "origin_name" => "src_station", "destination_name" => "dst_station"
+  }
+  hash.map {|k, v| [mappings[k] || k, v] }.to_h
 end
 
 def main
