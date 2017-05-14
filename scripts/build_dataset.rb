@@ -1,6 +1,7 @@
-require 'net/http'
 require 'csv'
+require 'date'
 require 'json'
+require 'net/http'
 
 BASE_URL       = 'https://transportapi.com/v3/uk/train'
 STATIONS_URL   = "#{BASE_URL}/stations/bbox.json?app_id=221cce2f&app_key=d209929236fc97196775650c2bdb639e&maxlat=51.2868&maxlon=0.3340&minlat=51.6923&minlon=-0.5103"
@@ -112,9 +113,17 @@ def parse_schedules(data)
   data['updates']['all'].each do |x|
     next unless x['mode'] == 'train'
     x.except!('mode', 'platform', 'operator', 'operator_name', 'source', 'category')
+    x.merge!("aimed_departure_time" => time_to_utc(x['aimed_departure_time']),
+             "aimed_arrival_time" => time_to_utc(x['aimed_arrival_time']),
+             "aimed_pass_time" => time_to_utc(x['aimed_pass_time']))
     schedules.push map_schedule(x)
   end
   schedules
+end
+
+# TODO: better date support
+def time_to_utc(str)
+  return DateTime.parse("2017-05-15 #{str}") unless str.nil?
 end
 
 def map_schedule(hash)
