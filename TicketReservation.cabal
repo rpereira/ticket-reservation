@@ -20,6 +20,7 @@ source-repository head
 library
   hs-source-dirs:      src
   exposed-modules:     Api
+                     , Api.Schedule
                      , Api.Station
                      , Api.Train
                      , Config
@@ -34,6 +35,7 @@ library
                      , persistent-template
                      , servant-server
                      , text
+                     , time
                      , transformers
                      , wai
                      , wai-extra
