@@ -27,12 +27,14 @@ def get_as_json(url)
 end
 
 def fetch_stations
+  puts "\n==> Fetching list of stations"
   response = get_as_json(STATIONS_URL)
   rpp = response['rpp']
   total = response['total']
   total_pages = total / rpp
 
   stations = parse_stations(response)
+  puts "page = #{response['page']}; total = #{stations.length}"
   (2..total_pages).each do |page|
     response = get_as_json("#{STATIONS_URL}&page=#{page}")
     stations.concat parse_stations(response)
