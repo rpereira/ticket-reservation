@@ -1,9 +1,14 @@
-TRUNCATE train, station;
+TRUNCATE train, station, schedule;
 
-INSERT INTO train VALUES (1, 'Alpha Train');
-INSERT INTO train VALUES (2, 'Beta Train');
-INSERT INTO train VALUES (3, 'Zeta Train');
+COPY train (id, name)
+  FROM '/Users/rap/code/thesis/TicketReservation/metadata/trains.csv'
+  DELIMITER ',' CSV HEADER;
 
-COPY station (name, crs_code, tiplic_code)
+COPY station (id, name, crs_code, tiplic_code)
   FROM '/Users/rap/code/thesis/TicketReservation/metadata/stations.csv'
+  DELIMITER ',' CSV HEADER;
+
+COPY schedule (service, train_id, departure_time, arrival_time, pass_time,
+  src_station_id, dst_station_id)
+  FROM '/Users/rap/code/thesis/TicketReservation/metadata/schedules.csv'
   DELIMITER ',' CSV HEADER;
