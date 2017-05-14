@@ -31,10 +31,11 @@ def json_to_csv(data)
   csv_string
 end
 
-def csv_to_json(fpath)
+# Get all values of the specified column from the specified CSV file.
+def csv_to_json(fpath, column)
   rows = []
   CSV.foreach(fpath, headers: true) do |row|
-    rows.push row['crs_code']
+    rows.push row[column]
   end
   rows
 end
@@ -83,7 +84,7 @@ end
 def fetch_schedules
   puts "\n==> Fetching time tables"
   schedules = []
-  crs_codes = csv_to_json(STATIONS_FILE_PATH)  # better API would be pass crs_code key as arg
+  crs_codes = csv_to_json(STATIONS_FILE_PATH, 'crs_code')
   crs_codes.each do |code|
     schedules.concat fetch_schedule_for_station(code)
   end
