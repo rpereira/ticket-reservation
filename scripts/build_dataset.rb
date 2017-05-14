@@ -8,6 +8,7 @@ TIME_TABLE_URL = "#{BASE_URL}/station/$0/2017-05-15/06:00/timetable.json?app_id=
 
 STATIONS_FILE_PATH  = 'metadata/stations.csv'
 SCHEDULES_FILE_PATH = 'metadata/schedules.csv'
+TRAINS_FILE_PATH    = 'metadata/trains.csv'
 
 class Hash
   # Removes the given keys from hash and returns it.
@@ -118,12 +119,26 @@ def map_schedule(hash)
   hash.map {|k, v| [mappings[k] || k, v] }.to_h
 end
 
+def extract_trains
+  puts "\n==> Extracting trains"
+
+  trains = []
+  train_names = csv_to_json(SCHEDULES_FILE_PATH, 'train_id')
+  train_names.each do |name|
+    trains.push({ :name => name })
+  end
+  trains.uniq
+end
+
 def main
   stations = fetch_stations
   write_to_file(json_to_csv(stations), STATIONS_FILE_PATH)
 
   schedules = fetch_schedules
   write_to_file(json_to_csv(schedules), SCHEDULES_FILE_PATH)
+
+  trains = extract_trains
+  write_to_file(json_to_csv(trains), TRAINS_FILE_PATH)
 end
 
 main
