@@ -5,11 +5,14 @@ require 'json'
 STATIONS_URL = 'https://transportapi.com/v3/uk/train/stations/bbox.json?app_id=221cce2f&app_key=d209929236fc97196775650c2bdb639e&maxlat=51.2868&maxlon=0.3340&minlat=51.6923&minlon=-0.5103'
 
 def json_to_csv(data)
-  CSV.generate do |csv|
+  column_names = data.first.keys
+  csv_string = CSV.generate do |csv|
+    csv << column_names
     data.each do |hash|
       csv << hash.values
     end
   end
+  csv_string
 end
 
 def write_to_file(data, path)
