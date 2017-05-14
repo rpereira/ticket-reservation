@@ -148,6 +148,19 @@ def update_train_id
   updated
 end
 
+def replace_station_name_with_id
+  stations = csv_to_array(STATIONS_FILE_PATH)
+  schedules = csv_to_array(SCHEDULES_FILE_PATH)
+  updated = []
+  schedules.each do |entry|
+    src = stations.find { |s| s['name'] == entry['src_station'] }
+    dst = stations.find { |s| s['name'] == entry['dst_station'] }
+    next if src.nil? || dst.nil?  # some destinations are not on the stations dataset
+    updated.push entry.merge!("src_station" => src['id'], "dst_station" => dst['id'])
+  end
+  updated
+end
+
 def main
   stations = fetch_stations
   write_to_file(json_to_csv(stations), STATIONS_FILE_PATH)
@@ -159,6 +172,9 @@ def main
   write_to_file(json_to_csv(trains), TRAINS_FILE_PATH)
 
   updated_schedules = update_train_id
+  write_to_file(json_to_csv(updated_schedules), SCHEDULES_FILE_PATH)
+
+  updated_schedules = replace_station_name_with_id
   write_to_file(json_to_csv(updated_schedules), SCHEDULES_FILE_PATH)
 end
 
