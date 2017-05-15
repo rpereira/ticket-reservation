@@ -109,16 +109,24 @@ def fetch_schedule_for_station(crs_code)
 end
 
 def parse_schedules(data)
+  station_id = get_station_id(data['station_code'])
   schedules = []
   data['updates']['all'].each do |x|
     next unless x['mode'] == 'train'
     x.except!('mode', 'platform', 'operator', 'operator_name', 'source', 'category')
-    x.merge!("aimed_departure_time" => time_to_utc(x['aimed_departure_time']),
+    x.merge!("station_id" => station_id,
+             "aimed_departure_time" => time_to_utc(x['aimed_departure_time']),
              "aimed_arrival_time" => time_to_utc(x['aimed_arrival_time']),
              "aimed_pass_time" => time_to_utc(x['aimed_pass_time']))
     schedules.push map_schedule(x)
   end
   schedules
+end
+
+def get_station_id(crs)
+  stations = csv_to_array(STATIONS_FILE_PATH)
+  station = stations.find { |s| s['crs_code'] == crs }
+  station['id']
 end
 
 # TODO: better date support
