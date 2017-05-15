@@ -18,7 +18,7 @@ postgres=# CREATE DATABASE railway;
 ## Seed database
 
 ```
-❯ psql railway < seeds.sql
+❯ psql railway < scripts/seeds.sql
 ```
 
 ## API
