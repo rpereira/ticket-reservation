@@ -27,6 +27,7 @@ import Config
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Schedule json
   train_id       Int
+  station_id     Int
   src_station_id Int
   dst_station_id Int
   arrival_time   UTCTime Maybe
