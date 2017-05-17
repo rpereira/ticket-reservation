@@ -26,23 +26,23 @@ import Config
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Schedule json
-  train_id       Int
-  station_id     Int
-  src_station_id Int
-  dst_station_id Int
-  arrival_time   UTCTime Maybe
-  departure_time UTCTime Maybe
-  pass_time      UTCTime Maybe
-  service        Text sqltype=varchar(8)
+  trainId       Int
+  stationId     Int
+  srcStationId  Int
+  dstStationId  Int
+  arrivalTime   UTCTime Maybe
+  departureTime UTCTime Maybe
+  passTime      UTCTime Maybe
+  service       Text sqltype=varchar(8)
 
   deriving Show
 
 Station json
-  name        Text
-  crs_code    Text sqltype=varchar(3)
-  tiplic_code Text sqltype=varchar(7)
+  name       Text
+  crsCode    Text sqltype=varchar(3)
+  tiplicCode Text sqltype=varchar(7)
 
-  UniqueCode crs_code tiplic_code
+  UniqueCode crsCode tiplicCode
 
   deriving Show
 
