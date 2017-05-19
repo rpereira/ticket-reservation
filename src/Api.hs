@@ -15,12 +15,13 @@ import Models
 import Api.Schedule
 import Api.Station
 import Api.Train
+import Api.User
 
-type API = StationAPI :<|> TrainAPI :<|> ScheduleAPI
+type API = StationAPI :<|> TrainAPI :<|> ScheduleAPI :<|> UserAPI
 
 -- | Combinate all endpoints to be served.
 server :: ServerT API App
-server = stationServer :<|> trainServer :<|> scheduleServer
+server = stationServer :<|> trainServer :<|> scheduleServer :<|> userServer
 
 appApi :: Proxy API
 appApi = Proxy

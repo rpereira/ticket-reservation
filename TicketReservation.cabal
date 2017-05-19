@@ -23,6 +23,7 @@ library
                      , Api.Schedule
                      , Api.Station
                      , Api.Train
+                     , Api.User
                      , Config
                      , Models
   build-depends:       base >= 4.7 && < 5
