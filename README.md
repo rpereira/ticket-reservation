@@ -50,9 +50,9 @@ curl --verbose --request GET --header "Content-Type: application/json" \
 curl --verbose --request GET --header "Content-Type: application/json" \
   http://localhost:8080/trains
 
-# GET /trains/:names
+# GET /trains/:name
 curl --verbose --request GET --header "Content-Type: application/json" \
-  http://localhost:8080/trains/Alpha%20Train
+  http://localhost:8080/trains/G00515
 ```
 
 ### User
