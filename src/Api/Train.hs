@@ -7,7 +7,7 @@ import Data.Text                   (Text)
 import Database.Persist.Postgresql (Entity (..), selectList, selectFirst, (==.))
 import Servant
 
-import Config (App (..), Config (..))
+import Config                      (App (..), Config (..))
 import Models
 
 type TrainAPI =
