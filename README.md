@@ -38,9 +38,13 @@ curl --verbose --request GET --header "Content-Type: application/json" \
 curl --verbose --request GET --header "Content-Type: application/json" \
   http://localhost:8080/stations
 
-# GET /stations/:name
+# GET /stations/:crs_code/timetable
 curl --verbose --request GET --header "Content-Type: application/json" \
-  http://localhost:8080/stations/Richmond
+  http://localhost:8080/stations/EPH/timetable
+
+# GET /stations/:crs_code/timetable/:time
+curl --verbose --request GET --header "Content-Type: application/json" \
+  http://localhost:8080/stations/EPH/timetable/2017-05-15T05:01:00Z
 ```
 
 ### Train

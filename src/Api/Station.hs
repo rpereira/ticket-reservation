@@ -3,26 +3,45 @@
 
 module Api.Station where
 
+import Database.Persist.Postgresql (Entity (..), selectList, selectFirst, (==.),
+                                    (>.))
 import Data.Text                   (Text)
-import Database.Persist.Postgresql (Entity (..), selectList, selectFirst, (==.))
+import Data.Time                   (UTCTime)
 import Servant
 
-import Config (App (..), Config (..))
+import Config                      (App (..), Config (..))
 import Models
 
 type StationAPI =
        "stations" :> Get '[JSON] [Entity Station]
-  :<|> "stations" :> Capture "name" Text :> Get '[JSON] (Entity Station)
+  :<|> "stations" :> Capture "crs" Text
+                  :> "timetable"
+                  :> Get '[JSON] [Entity Schedule]
+  :<|> "stations" :> Capture "crs" Text
+                  :> "timetable"
+                  :> Capture "time" UTCTime
+                  :> Get '[JSON] [Entity Schedule]
 
 stationServer :: ServerT StationAPI App
-stationServer = allStations :<|> getStation
+stationServer =
+       allStations
+  :<|> scheduleForStation
+  :<|> scheduleForStationAfterTime
 
 allStations :: App [Entity Station]
 allStations = runDb (selectList [] [])
 
-getStation :: Text -> App (Entity Station)
-getStation str = do
-  maybeStation <- runDb (selectFirst [StationName ==. str] [])
-  case maybeStation of
-    Just station -> return station
-    Nothing      -> throwError err404
+scheduleForStation :: Text -> App [Entity Schedule]
+scheduleForStation crsCode = runDb $ do
+  station <- selectFirst [StationCrsCode ==. crsCode] []
+  case station of
+    Nothing -> return []
+    Just s -> selectList [ScheduleStationId ==. entityKey s] []
+
+scheduleForStationAfterTime :: Text -> UTCTime -> App [Entity Schedule]
+scheduleForStationAfterTime crs time = runDb $ do
+  station <- selectFirst [StationCrsCode ==. crs] []
+  case station of
+    Nothing -> return []
+    Just s -> selectList [ScheduleStationId ==. entityKey s,
+                          ScheduleDepartureTime >. Just time] []
