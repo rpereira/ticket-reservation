@@ -25,6 +25,12 @@ import GHC.Generics         (Generic)
 import Config
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
+User json
+  name  Text
+  email Text
+
+  deriving Show
+
 Schedule json
   trainId       Int
   stationId     StationId
