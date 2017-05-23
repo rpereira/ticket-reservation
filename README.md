@@ -23,12 +23,18 @@ postgres=# CREATE DATABASE railway;
 
 ## API
 
-### Schedules
+### List Schedules
 
+`GET /schedules`
+
+**Query parameters:**
+
+- `?page=2`: Get schedules by page (default is 1)
+
+Example:
 ```
-# GET /schedules
 curl --verbose --request GET --header "Content-Type: application/json" \
-  http://localhost:8080/schedules
+  http://localhost:8080/schedules?page=3
 ```
 
 ### Station
