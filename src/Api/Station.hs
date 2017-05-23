@@ -4,7 +4,7 @@
 module Api.Station where
 
 import Database.Persist.Postgresql (Entity (..), selectList, selectFirst, (==.),
-                                    (>.))
+                                    (>=.))
 import Data.Text                   (Text)
 import Data.Time                   (UTCTime)
 import Servant
@@ -44,4 +44,4 @@ scheduleForStationAfterTime crs time = runDb $ do
   case station of
     Nothing -> return []
     Just s -> selectList [ScheduleStationId ==. entityKey s,
-                          ScheduleDepartureTime >. Just time] []
+                          ScheduleDepartureTime >=. Just time] []
