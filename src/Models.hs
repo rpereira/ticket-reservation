@@ -29,6 +29,8 @@ User json
   name  Text
   email Text
 
+  UniqueEmail email
+
   deriving Show
 
 Schedule json
