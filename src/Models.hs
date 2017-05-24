@@ -56,6 +56,32 @@ Station json
 
 Train json
   name Text
+  UniqueName name
+  deriving Show
+
+TrainSeats json
+  trainId TrainId
+  number  Int
+
+  deriving Show
+
+Passenger json
+  name    Text
+  address Text Maybe
+
+SeatReservation json
+  reservationId ReservationId
+  passengerId   PassengerId
+  seatNumber    Int
+
+Reservation json
+  trainId       TrainId
+  passengerName Text
+  departureTime UTCTime
+  srcStationId  StationId
+  dstStationId  StationId
+  createdAt     UTCTime default=now()
+
   deriving Show
 |]
 

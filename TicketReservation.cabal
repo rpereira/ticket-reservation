@@ -20,6 +20,7 @@ source-repository head
 library
   hs-source-dirs:      src
   exposed-modules:     Api
+                     , Api.Reservation
                      , Api.Schedule
                      , Api.Station
                      , Api.Train
