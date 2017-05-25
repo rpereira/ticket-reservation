@@ -56,7 +56,7 @@ Station json
 
 Train json
   name Text
-  UniqueName name
+  TrainCode name
   deriving Show
 
 TrainSeats json
@@ -84,6 +84,7 @@ Reservation json
 
   deriving Show
 |]
+
 
 doMigrations :: SqlPersistT IO ()
 doMigrations = runMigration migrateAll
